@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+<style>
+.color{
+background-color: grey;
+
+}
+.login{
+  text-align: center;
+  color:coral;
+}
+#button{
+  color:green;
+  background-color: gold;
+}
+
+
+</style>
+
+
+
+  
+
+
+</head>
+
+<body class="color">
+ <div class="login">
+	<h1>Diabetes Prediction</h1>
+    <form action="{{ url_for('predict_datapoint')}}" method="post">
+      <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
+    	<input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+        <input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /><br>
+        <input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" /><br>
+        <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+        <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+        <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" /><br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+
+
+        <button id="button" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+<body>
+
+   <br>
+   <br>
+
+
+   <h3>You have {{result}}</h3>
+ </div>
+
+</body>
+</html>
